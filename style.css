@@ -1,0 +1,221 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500|IBM+Plex+Sans:200,300');
+
+body {
+    background-color: #060606;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.032em;
+}
+
+/*
+body::after {
+    content: "";
+    background: url(Desktop.png);
+    background-size: cover;
+    opacity: 0.5;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+    height: 100%;
+}
+*/
+
+a {
+    text-decoration: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 110px auto;
+    display: flex;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2em;
+    margin: 0.6em 0;
+    letter-spacing: 0.065em;
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #d9d9d9;
+    font-weight: 200;
+    line-height: 1.375em;
+}
+
+.left {
+    margin-right: 80px;
+    min-width: 220px;
+}
+
+.left .links {
+    line-height: 1.55em;
+}
+
+.left .links span,
+a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.left .links a {
+    color: #fff;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.7em 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.profile-pic {
+    background-image: url(img/pic.png);
+    width: 185px;
+    height: 185px;
+    background-size: contain;
+    border-radius: 100%;
+    filter: grayscale();
+}
+
+.tabs {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    display: flex;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    font-size: 1.03em;
+    line-height: 2.3em;
+    /* underline */
+    box-shadow: inset 0 -1px 0 0 #5c5c5c;
+    transition: .3s ease-in-out;
+}
+
+.tab {
+    margin-right: 40px;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.tab:hover {
+    opacity: 1;
+}
+
+.tab:hover ~ hr {
+    margin-left: 25%;
+}
+
+.tab:hover ~ hr {
+    margin-left: 50%;
+}
+
+.tab:hover ~ hr {
+    margin-left: 75%;
+}
+
+.selected {
+    opacity: 1;
+    box-shadow: inset 0 -2px 0 0 #fff;
+}
+
+
+.research .item {
+    margin-bottom: 2em;
+    display: flex;
+}
+
+
+.research .item .number {
+    display: block;
+    margin-right: 0.5em;
+}
+
+.item img {
+    width: 50%;
+    max-width: 100%;
+}
+
+.publications {
+    display: none;
+}
+
+.publications .row {
+    display: flex;
+}
+
+.publications .row .left {
+    min-width: 110px;
+}
+
+.publications .year {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d9d9d9;
+    font-weight: 300;
+    font-size: 0.88em;
+}
+
+.publications .details {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 0.02em;
+    color: #d9d9d9;
+    font-size: 0.88em;
+    line-height: 1.5em;
+}
+
+.publication-item {
+    margin-bottom: 2em;
+}
+
+footer {
+    margin: 1em;
+}
+
+#credits {
+    cursor: pointer;
+}
+
+footer {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d9d9d9;
+    font-weight: 300;
+    font-size: 0.8em;
+    position: relative;
+}
+
+footer .credit-box {
+    color: #060606;
+    background: #d9d9d9;
+    font-weight: 500;
+    line-height: 1.7em;
+    padding: 1.7em;
+    position: absolute;
+    width: auto;
+    bottom: 2em;
+    display: none;
+}
+
+footer .credit-box #close {
+    font-size: 1.3em;
+    float: right;
+    margin-top: -0.7em;
+    margin-right: -0.65em;
+    margin-left: 1em;
+    cursor: pointer;
+}
