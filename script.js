@@ -1,3 +1,22 @@
+/* Accordion */
+
+$(".accordion").append('<div class="plus"><i class="vertical"></i><i></i></div>'); // adds plus icon
+
+$(".accordion").click(function () {
+    var id = ($(this).attr("id")).replace("accordion-", "");
+
+    if (!($(this).hasClass("expanded"))) {
+        $("." + id).css("display", "block");
+        $(this).find(".vertical").css("display", "none");
+        $(this).addClass("expanded");
+    } else {
+        $("." + id).css("display", "none");
+        $(this).find(".vertical").css("display", "block");
+        $(this).removeClass("expanded");
+    }
+})
+
+/* Tabs */
 $(".tab").click(function () {
     // change the tab bar state
     $(".tab").removeClass("selected");
@@ -9,7 +28,7 @@ $(".tab").click(function () {
     $("." + id).css("display", "block");
 })
 
-// credits box
+/* credits box */
 $("#credits").click(function () {
     if ($('.credit-box').css('display') == 'none') {
         $(".credit-box").css("display", "block");
@@ -21,3 +40,11 @@ $("#credits").click(function () {
 $("#close").click(function () {
     $(".credit-box").css("display", "none");
 })
+
+$(window).resize(function () {
+    if ($(this).width() > 540) {
+        $($(".tab-content")[0]).css("display", "block");
+    } else {
+        $($(".tab-content")).css("display", "none");
+    }
+});

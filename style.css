@@ -6,6 +6,7 @@ body {
     color: #fff;
     margin: 0;
     letter-spacing: 0.0185em;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 a {
@@ -23,7 +24,8 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h6 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
 }
@@ -46,15 +48,19 @@ h3 {
 }
 
 h4 {
-    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.2em;
     margin: 0.5em 0;
     letter-spacing: 0.02em;
     font-weight: 400;
 }
 
+h6 {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0;
+}
+
 p {
-    font-family: 'IBM Plex Sans', sans-serif;
     color: #e3e3e3;
     font-weight: 300;
     line-height: 1.375em;
@@ -71,7 +77,7 @@ p {
 }
 
 .profile-area .links {
-    line-height: 1.6em;
+    line-height: 1.5em !important;
 }
 
 .profile-area .links span,
@@ -79,6 +85,14 @@ p {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 0.9em;
+}
+
+.profile-area .links strong {
+    font-weight: 500;
+}
+
+.profile-area .link-item {
+    margin-bottom: 1em;
 }
 
 .profile-pic {
@@ -90,7 +104,8 @@ p {
     filter: grayscale(100%);
 }
 
-.tabs {
+.tabs,
+.accordion {
     margin-top: 3em;
     margin-bottom: 2em;
     display: flex;
@@ -98,6 +113,10 @@ p {
     font-weight: 300;
     font-size: 1.03em;
     line-height: 2.3em;
+
+}
+
+.tabs {
     /* underline */
     box-shadow: inset 0 -1px 0 0 #5c5c5c;
     transition: .3s ease-in-out;
@@ -120,6 +139,29 @@ p {
 .selected {
     opacity: 1;
     box-shadow: inset 0 -2px 0 0 #fff;
+}
+
+.accordion {
+    display: none;
+    position: relative;
+}
+
+.accordion .plus i {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background-color: #5c5c5c;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.accordion .plus i:first-of-type {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg)
 }
 
 .research .item {
@@ -160,7 +202,6 @@ p {
 }
 
 .publications .details {
-    font-family: 'IBM Plex Sans', sans-serif;
     letter-spacing: 0.02em;
     color: #e3e3e3;
     font-size: 0.88em;
@@ -240,24 +281,33 @@ footer .credit-box #close {
         display: block;
     }
 
-    .profile-pic {
-        width: 110px;
-        height: 110px;
-        margin-right: 2.5em;
-        flex-shrink: 0;
-    }
-
     .profile-area {
         width: 100%;
         display: flex;
         margin: 0;
+        display: block;
+        position: relative;
+    }
+
+    .profile-area .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-right: 2.5em;
+        flex-shrink: 0;
     }
 
     .profile-area .links {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        line-height: 0.95em;
+        position: absolute;
+        top: 220px;
+    }
+
+    .profile-area .links .link-item {
+        margin-right: 2.5em;
+    }
+
+    .profile-area .links .link-item:last-of-type {
+        margin-right: 0;
     }
 
     .publications .row {
@@ -270,28 +320,36 @@ footer .credit-box #close {
     }
 
     h1 {
-         font-size: 2.1em;
+        font-size: 2.1em;
         margin: 0;
     }
 
     .content-area .bio {
-        margin-top: 140px;
-    }
-
-    .profile-area {
-        display: block;
-        position: relative;
-    }
-
-    .links {
-        position: absolute;
-        top: 260px;
+        margin-top: 120px;
+        margin-bottom: 3em;
     }
 }
 
 @media(max-width: 540px) {
-    .tab {
-        font-size: 0.98em;
+    .tabs {
+        display: none;
+    }
+
+    .accordion {
+        display: block;
+        border-top: 1px solid #5c5c5c;
+        border-bottom: 1px solid #5c5c5c;
+        line-height: 3.5em;
+        margin: -1px;
+        cursor: pointer;
+    }
+
+    .accordion:first-of-type {
+        margin-top: 100px !important;
+    }
+
+    .tab-content {
+        display: none;
     }
 
     .research .item {
