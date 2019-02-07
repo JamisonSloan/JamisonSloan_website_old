@@ -41,8 +41,11 @@ $("#close").click(function () {
     $(".credit-box").css("display", "none");
 })
 
+var width = $(window).width(),
+    height = $(window).height();
+
 $(window).resize(function () {
-    if ($(this).width() > 540) {
+    if ($(window).width() != width && $(window).height() != height) {
         $($(".tab-content")[0]).css("display", "block");
     } else {
         $($(".tab-content")).css("display", "none");
