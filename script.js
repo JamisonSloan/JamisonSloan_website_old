@@ -46,8 +46,10 @@ var width = $(window).width(),
 
 $(window).resize(function () {
     if ($(window).width() != width && $(window).height() != height) {
-        $($(".tab-content")[0]).css("display", "block");
-    } else {
-        $($(".tab-content")).css("display", "none");
+        if ($(this).width() > 540) {
+            $($(".tab-content")[0]).css("display", "block");
+        } else {
+            $($(".tab-content")).css("display", "none");
+        }
     }
 });
