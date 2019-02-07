@@ -66,6 +66,10 @@ p {
     flex-shrink: 0;
 }
 
+.title {
+    float: right;
+}
+
 .profile-area .links {
     line-height: 1.6em;
 }
@@ -75,10 +79,6 @@ p {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 0.9em;
-}
-
-.profile-area .links a {
-    color: #fff;
 }
 
 .profile-pic {
@@ -250,6 +250,7 @@ footer .credit-box #close {
     .profile-area {
         width: 100%;
         display: flex;
+        margin: 0;
     }
 
     .profile-area .links {
@@ -266,5 +267,35 @@ footer .credit-box #close {
     .publications .row .left {
         width: 100%;
         margin: 3em 0 1.5em;
+    }
+
+    h1 {
+         font-size: 2.1em;
+        margin: 0;
+    }
+
+    .content-area .bio {
+        margin-top: 140px;
+    }
+
+    .profile-area {
+        display: block;
+        position: relative;
+    }
+
+    .links {
+        position: absolute;
+        top: 260px;
+    }
+}
+
+@media(max-width: 540px) {
+    .tab {
+        font-size: 0.98em;
+    }
+
+    .research .item {
+        display: block;
+        margin-bottom: 3.1em;
     }
 }
