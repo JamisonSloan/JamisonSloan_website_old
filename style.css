@@ -10,6 +10,9 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 main {
@@ -23,6 +26,17 @@ h2,
 h3 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.7em 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4em;
 }
 
 h3 {
@@ -53,11 +67,11 @@ p {
 }
 
 .profile-area .links {
-    line-height: 1.55em;
+    line-height: 1.6em;
 }
 
 .profile-area .links span,
-a {
+.profile-area .links a {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 0.9em;
@@ -65,16 +79,6 @@ a {
 
 .profile-area .links a {
     color: #fff;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin: 0.7em 0;
-}
-
-h2 {
-    font-weight: 400;
-    font-size: 1.4em;
 }
 
 .profile-pic {
@@ -107,6 +111,10 @@ h2 {
 
 .tab:hover {
     opacity: 1;
+}
+
+.tab:last-of-type {
+    margin-right: 0;
 }
 
 .selected {
@@ -166,6 +174,11 @@ h2 {
 
 footer {
     margin: 1em;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d9d9d9;
+    font-weight: 300;
+    font-size: 0.8em;
+    position: relative;
 }
 
 #credits {
@@ -175,14 +188,6 @@ footer {
 
 #credits:hover {
     opacity: 1;
-}
-
-footer {
-    font-family: 'IBM Plex Mono', monospace;
-    color: #d9d9d9;
-    font-weight: 300;
-    font-size: 0.8em;
-    position: relative;
 }
 
 footer .credit-box {
@@ -247,10 +252,11 @@ footer .credit-box #close {
         display: flex;
     }
 
-    .links {
+    .profile-area .links {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        line-height: 0.95em;
     }
 
     .publications .row {
