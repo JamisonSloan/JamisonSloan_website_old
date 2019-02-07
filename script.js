@@ -45,7 +45,7 @@ var width = $(window).width(),
     height = $(window).height();
 
 $(window).resize(function () {
-    if ($(window).width() != width && $(window).height() != height) {
+    if ($(window).height() == height) {
         if ($(this).width() > 540) {
             $($(".tab-content")[0]).css("display", "block");
         } else {

@@ -48,10 +48,11 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2em;
     margin: 0.5em 0;
-    letter-spacing: 0.02em;
     font-weight: 400;
+    font-size: 1.25em;
+    line-height: 1.35em;
+    letter-spacing: 0.02em;
 }
 
 h6 {
@@ -63,7 +64,8 @@ h6 {
 p {
     color: #e3e3e3;
     font-weight: 300;
-    line-height: 1.375em;
+    font-size: 1.04em;
+    line-height: 1.383em;
 }
 
 .profile-area {
@@ -80,11 +82,27 @@ p {
     line-height: 1.5em !important;
 }
 
-.profile-area .links span,
 .profile-area .links a {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     font-size: 0.9em;
+    position: relative;
+}
+
+.profile-area .links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 0.55em;
+    bottom: 1px;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.profile-area .links a:hover:after {
+    width: 100%;
+    transition: width .2s ease-out;
 }
 
 .profile-area .links strong {
@@ -119,13 +137,14 @@ p {
 .tabs {
     /* underline */
     box-shadow: inset 0 -1px 0 0 #5c5c5c;
-    transition: .3s ease-in-out;
+
 }
 
 .tab {
     margin-right: 40px;
     opacity: .6;
     cursor: pointer;
+    transition: .15s ease-out;
 }
 
 .tab:hover {
@@ -204,7 +223,7 @@ p {
 .publications .details {
     letter-spacing: 0.02em;
     color: #e3e3e3;
-    font-size: 0.88em;
+    font-size: 0.9em;
     line-height: 1.5em;
     font-weight: 300;
 }
