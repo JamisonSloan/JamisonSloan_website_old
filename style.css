@@ -170,6 +170,11 @@ footer {
 
 #credits {
     cursor: pointer;
+    opacity: 0.6;
+}
+
+#credits:hover {
+    opacity: 1;
 }
 
 footer {
