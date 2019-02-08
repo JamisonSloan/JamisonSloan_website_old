@@ -41,15 +41,20 @@ $("#close").click(function () {
     $(".credit-box").css("display", "none");
 })
 
+
+/* for window resize */
 var width = $(window).width(),
     height = $(window).height();
 
 $(window).resize(function () {
     if ($(window).height() == height) {
-        if ($(this).width() > 540) {
-            $($(".tab-content")[0]).css("display", "block");
-        } else {
-            $($(".tab-content")).css("display", "none");
+        if ($(window).width() != width) {
+            // Only action on screen width change
+            if ($(this).width() > 540) {
+                $($(".tab-content")[0]).css("display", "block");
+            } else {
+                $($(".tab-content")).css("display", "none");
+            }
         }
     }
 });

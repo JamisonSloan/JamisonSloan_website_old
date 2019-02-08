@@ -78,13 +78,10 @@ p {
     float: right;
 }
 
-.profile-area .links {
-    line-height: 1.5em !important;
-}
-
 .profile-area .links a {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
+    line-height: 1.5em;
     font-size: 0.9em;
     position: relative;
 }
@@ -326,7 +323,7 @@ footer .credit-box #close {
     }
 
     .profile-area .links .link-item:last-of-type {
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 
     .publications .row {
@@ -374,5 +371,23 @@ footer .credit-box #close {
     .research .item {
         display: block;
         margin-bottom: 3.1em;
+    }
+}
+
+@media(max-width: 374px) {
+    main {
+        padding: 1.3em;
+    }
+
+    h1 {
+        font-size: 1.88em;
+    }
+
+    .profile-area .links {
+        display: block;
+    }
+
+    .content-area .bio {
+        margin-top: 160px;
     }
 }
