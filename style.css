@@ -1,11 +1,11 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500|IBM+Plex+Sans:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500|IBM+Plex+Sans:200,300,400,500,600');
 
 body {
     background-color: #060606;
     color: #fff;
     margin: 0;
-    letter-spacing: 0.0185em;
+    letter-spacing: 0.02em;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -57,7 +57,7 @@ h4 {
 
 h6 {
     font-size: 0.9em;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -69,7 +69,7 @@ p {
 }
 
 b {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .profile-area {
@@ -85,52 +85,9 @@ b {
 .profile-area .links a {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
-    line-height: 1.6em;
+    line-height: 1.85em;
     font-size: 0.9em;
     position: relative;
-}
-
-.profile-area .links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    left: 0;
-    height: 0.55em;
-    bottom: 1px;
-    z-index: -1;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.profile-area .links a:hover:after {
-    width: 100%;
-    transition: width 0.2s ease-out;
-}
-
-.content-area .links a:hover:after {
-    width: 100%;
-    transition: width 0.2s ease-out;
-}
-
-.publications .publication-item a {
-    display: block;
-    margin: 0.6em 0;
-}
-
-.publications .publication-item h4 {
-    display: inline;
-    width: calc(100%);
-    background-image: linear-gradient(transparent calc(100% - 0.5em), rgba(255, 255, 255, 0.3) 0);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    transition: background-size .25s;
-}
-
-.publications .publication-item h4:hover {
-    background-size: 100% 100%;
-}
-
-.profile-area .links strong {
-    font-weight: 500;
 }
 
 .profile-area .link-item {
@@ -146,6 +103,36 @@ b {
     filter: grayscale(100%);
 }
 
+.publications .publication-item a {
+    display: block;
+    margin: 0.6em 0;
+}
+
+/* Hover actions */
+.publications .publication-item h4,
+.bio a,
+.profile-area .links a {
+    display: inline;
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 0.5em), rgba(255, 255, 255, 0.3) 0);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .23s ease-out;
+    -webkit-transition: background-size .23s ease-out;
+    -moz-transition: background-size .23s ease-out;
+}
+
+.publications .publication-item h4:hover,
+.bio a:hover,
+.content-area .links a:hover,
+.profile-area .links a:hover {
+    background-size: 100% 100%;
+}
+
+.bio a:hover {
+    color: #fff;
+}
+
 .tabs,
 .accordion {
     margin-top: 3em;
@@ -155,13 +142,11 @@ b {
     font-weight: 300;
     font-size: 1.03em;
     line-height: 2.3em;
-
 }
 
 .tabs {
     /* underline */
     box-shadow: inset 0 -1px 0 0 #5c5c5c;
-
 }
 
 .tab {
@@ -207,17 +192,17 @@ b {
     transform: rotate(90deg)
 }
 
-.research .item {
+.research .research-item {
     margin-bottom: 2em;
     display: flex;
 }
 
-.research .item .number {
+.research .research-item .number {
     display: block;
     margin-right: 0.5em;
 }
 
-.item img {
+.research-item img {
     width: 50%;
     max-width: 100%;
 }
