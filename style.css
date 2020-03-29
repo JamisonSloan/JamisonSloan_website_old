@@ -108,13 +108,15 @@ b {
     margin: 0.6em 0;
 }
 
+
 /* Hover actions */
+
 .publications .publication-item h4,
 .bio a,
 .profile-area .links a {
     display: inline;
     width: calc(100%);
-    background-image: linear-gradient(transparent calc(100% - 0.5em), rgba(255, 255, 255, 0.3) 0);
+    background-image: linear-gradient(transparent calc(100% - 0.68em), rgba(255, 255, 255, 0.28) 0);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size .23s ease-out;
@@ -147,6 +149,7 @@ b {
 .tabs {
     /* underline */
     box-shadow: inset 0 -1px 0 0 #5c5c5c;
+    position: relative;
 }
 
 .tab {
@@ -166,7 +169,15 @@ b {
 
 .selected {
     opacity: 1;
-    box-shadow: inset 0 -2px 0 0 #fff;
+}
+
+.underline {
+    background-color: #fff;
+    position: absolute;
+    width: 184px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
 }
 
 .accordion {
@@ -380,7 +391,7 @@ footer .credit-box #close {
         display: none;
     }
 
-    .research .item {
+    .research .research-item {
         display: block;
         margin-bottom: 3.1em;
     }

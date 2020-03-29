@@ -16,7 +16,9 @@ $(".accordion").click(function () {
     }
 })
 
+
 /* Tabs */
+
 $(".tab").click(function () {
     // change the tab bar state
     $(".tab").removeClass("selected");
@@ -26,9 +28,25 @@ $(".tab").click(function () {
     var id = $(this).attr("id");
     $(".tab-content").css("display", "none");
     $("." + id).css("display", "block");
+
+    // move the underline
+    var tabs = $(".tab");
+    var index = $(this).index();
+    var leftPos = 0;
+
+    for (i = 0; i < index; i++) {
+        leftPos += ($(tabs[i]).width() + 40)
+    }
+
+    $(".underline").animate({
+        left: leftPos,
+        width: $(this).width()
+    }, 150);
 })
 
+
 /* credits box */
+
 $("#credits").click(function () {
     if ($('.credit-box').css('display') == 'none') {
         $(".credit-box").css("display", "block");
