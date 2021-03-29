@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500|IBM+Plex+Sans:200,300,400,500,600');
 
 body {
-    background-color: #060606;
+    background-color: #1a1a1a;
     color: #fff;
     margin: 0;
     letter-spacing: 0.02em;
@@ -18,7 +18,9 @@ a {
 
 main {
     max-width: 1000px;
-    margin: 110px auto;
+    background-color: #1a1a1a;
+    margin: 0 auto;
+    padding: 110px 0 140px;
     display: flex;
 }
 
@@ -103,7 +105,7 @@ b {
     filter: grayscale(100%);
 }
 
-.publications .publication-item a {
+.publications .publication-item h4 {
     display: block;
     margin: 0.6em 0;
 }
@@ -111,7 +113,7 @@ b {
 
 /* Hover actions */
 
-.publications .publication-item h4,
+.publications .publication-item a,
 .bio a,
 .profile-area .links a {
     display: inline;
@@ -124,7 +126,7 @@ b {
     -moz-transition: background-size .23s ease-out;
 }
 
-.publications .publication-item h4:hover,
+.publications .publication-item a:hover,
 .bio a:hover,
 .content-area .links a:hover,
 .profile-area .links a:hover {
