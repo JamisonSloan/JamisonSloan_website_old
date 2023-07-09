@@ -1,0 +1,18 @@
+.page-foot {
+  grid-column: 3/11;
+  text-align: center;
+}
+
+.page-foot p {
+  font-size: 0.9rem;
+}
+
+/* adjusting the arrow size to match the font size */
+.page-foot p a:after {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.page-foot p a:before {
+ background-color: var(--gray4);
+}
